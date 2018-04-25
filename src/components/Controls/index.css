@@ -1,0 +1,45 @@
+.controls{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+}
+.play-pause-global, .loop-container{
+    width: inherit;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    line-height: 40px;
+}
+.play-global, .pause-global, .loop-global{
+    width: inherit;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(56, 56, 56);
+    transition: background-color 1s;
+}
+.play-global{
+    background-color: green;
+}
+
+.play-pause-global.active .pause-global{
+    background-color: red;
+}
+.play-pause-global.active .play-global{
+    background-color: rgb(56, 56, 56);
+}
+
+.loop-container{
+    font-size: 26px;
+}
+.loop-global{
+    background-color: green;
+}
+.loop-container.active .loop-global{
+    background-color: red;
+}
